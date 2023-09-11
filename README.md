@@ -27,8 +27,8 @@ The HRGT takes in the following parameters:
 |------------------------------|------------------------------------------------------------------------|:------:|
 |-c, --config \<path>          |Path (including the filename) of the tool's (YAML) configuration file   |No      |
 |input \<globpattern>          |Glob pattern that specifies the set of (input) files                    |No      |
-|-o, --output \<name>           |text that is used as the last part of the name of the file(s) that contain(s) the generated HRG(s).                         |Yes     |
-|-s, --scopedir \<path>        |Path of the scope directory where the SAF is located                    |Yes     |
+|-o, --output \<name>           |text that is used as the last part of the name of the file(s) that contain(s) the generated HRG(s).                         |No     |
+|-s, --scopedir \<path>        |Path of the scope directory where the SAF is located                    |No     |
 |-v, --vsntag \<vsntag>        |Default version to use when no version is set in term ref               |No      |
 |-f, --force                   |Allow overwriting of existing files                                     |No      |
 |-t, --termselcrit \<criteria> |List of term selection criteria that are used to generate               |No      |
