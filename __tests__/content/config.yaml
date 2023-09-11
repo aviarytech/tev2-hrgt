@@ -1,0 +1,6 @@
+# TRRT configuration file (yaml)
+# output: __tests__/output
+scopedir: __tests__/content
+# glob pattern strings for files to be processed
+# input:
+#   - __tests__/content/*.md

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Glossary</title>
+</head>
+<body>
+<div class="glossary-container">
+<h1>Glossary</h1>
+<ul class="glossary-list">
+{{#entries}}
+<li class="glossary-item">
+  <div class="glossary-term">
+    <strong>Term:</strong> {{term}}
+  </div>
+  <div class="glossary-definition">
+    <strong>Definition:</strong>
+    {{#glossaryText}}
+      {{glossaryText}}
+    {{/glossaryText}}
+    {{^glossaryText}}
+      No glossary text available.
+    {{/glossaryText}}
+  </div>
+  {{#altterms}}
+  <div class="glossary-alternatives">
+    <strong>Alternative Terms:</strong> {{.}}
+  </div>
+  {{/altterms}}
+</li>
+{{/entries}}
+</ul>
+</div>
+</body>
+</html>
