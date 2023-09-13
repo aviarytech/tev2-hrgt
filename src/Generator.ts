@@ -5,8 +5,6 @@ import path, { resolve } from "path";
 import { glob } from "glob";
 import fs from "fs";
 
-type AnyObject = { [key: string]: any };
-
 export class Generator {
   private method: string;
   private scopedir: string;
@@ -83,7 +81,6 @@ export class Generator {
         "./assets/hrg-template.mustache",
         "utf8"
       );
-      console.log(this.entries);
       const template = Handlebars.compile(templateFile);
       this.htmlOutput = template({ entries: this.entries });
     } catch (error) {

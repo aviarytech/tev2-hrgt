@@ -28,7 +28,6 @@ describe('Run HRGT on provided test files', () => {
     });
 
     hrgtProcess.on('close', (code) => {
-      console.log(consoleOutput)
 
       expect(code).to.equal(0);
 
