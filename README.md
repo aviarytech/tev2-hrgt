@@ -3,7 +3,7 @@
 ## Overview
 
 The **Human Readable Glossary Tool (HRGT)** generates a Human Readable Glossary (HRG) that consists of (a selection of) the terms that are part of the terminology of a specific scope. The HRGT takes one specific MRG as its input, and converts (a selection of) its MRG entries into one of the supported output formats, e.g. HTML, or PDF. The file that contains the MRG is named mrg.<scopetag>.<vsntag>.yaml, where the combination of <scopetag> and <vsntag> identify a particular terminology. See the MRG file naming conventions for details. There is more information about 
-- [overview of the TEv2 tools](https://tno-terminology-design.github.io/tev2-specifications/docs/tev2-overview) of which the TRRT is a part.
+- [overview of the TEv2 tools](https://tno-terminology-design.github.io/tev2-specifications/docs/tev2-overview) of which the HRGT is a part.
 
 ## Installation
 
