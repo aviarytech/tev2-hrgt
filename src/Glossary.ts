@@ -88,7 +88,6 @@ export class Glossary {
   public async initialize(mrgFileName: string | null): Promise<Output> {
     let mrgfile = path.join(
       this.scopedir,
-      this.saf.scope.glossarydir,
       mrgFileName ?? this.saf.scope.mrgfile
     );
 
