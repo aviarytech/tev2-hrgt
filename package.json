@@ -1,5 +1,5 @@
 {
-  "name": "ctwg-toolkit-hrgt",
+  "name": "@aviarytech/tev2-hrgt",
   "version": "0.0.1",
   "description": "Human Readable Glossary Tool (HRGT)",
   "main": "lib/Run.js",
@@ -10,20 +10,20 @@
   "type": "module",
   "scripts": {
     "build": "rm -rf lib && tsc -p .",
-    "rebuild": "npm uninstall @aviarytech/hrgt -g && rm lib -rf && npm run build && npm i -g",
+    "rebuild": "npm uninstall @aviarytech/tev2-hrgt -g && rm lib -rf && npm run build && npm i -g",
     "test": "npm run build && mocha __tests__/**/*.test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aviarytech/ctwg-toolkit-hrgt"
+    "url": "git+https://github.com/aviarytech/tev2-hrgt"
   },
   "keywords": [],
   "author": "Aviary Tech",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aviarytech/ctwg-toolkit-hrgt/issues"
+    "url": "https://github.com/aviarytech/tev2-hrgt/issues"
   },
-  "homepage": "https://github.com/aviarytech/ctwg-toolkit-hrgt#readme",
+  "homepage": "https://github.com/aviarytech/tev2-hrgt#readme",
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "10.0.0",
