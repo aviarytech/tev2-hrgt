@@ -6,18 +6,28 @@ import { Command } from "commander";
 import { readFileSync } from "fs";
 import { resolve } from "path";
 import { report, log } from "./Report.js";
+import { fileURLToPath } from "url";
 
+import fs from "fs";
+import path from "path";
 import yaml from "js-yaml";
 import chalk from "chalk";
 import figlet from "figlet";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const packageJson = JSON.parse(
+  fs.readFileSync(path.resolve(__dirname, "package.json"), "utf8")
+);
+const version = packageJson.version;
 
 export let generator: Generator;
 export let glossary: Glossary;
 const program = new Command();
 
 program
-  .name("hrgt")
-  .version("0.0.1")
+  .name("tev2-hrgt")
+  .version(version)
   .usage(
     "[ <paramlist> ] [ <globpattern> ]\n" +
       "- <paramlist> (optional) is a list of key-value pairs\n" +
@@ -58,7 +68,7 @@ async function main(): Promise<void> {
   }
 
   console.log(
-    chalk.red(figlet.textSync("hrgt-cli", { horizontalLayout: "full" }))
+    chalk.red(figlet.textSync("TEv2 HRGT", { horizontalLayout: "full" }))
   );
 
   if (options.config) {
