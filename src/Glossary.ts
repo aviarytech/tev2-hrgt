@@ -86,10 +86,11 @@ export class Glossary {
    * @returns A promise that resolves to the populated runtime glossary.
    */
   public async initialize(mrgFileName: string | null): Promise<Output> {
-    let glossarydir = path.join(this.scopedir, this.saf.scope.glossarydir);
-    console.log("glossary dir", glossarydir);
-    console.log("mrg file", mrgFileName ?? this.saf.scope.mrgfile);
-    let mrgfile = path.join(glossarydir, mrgFileName ?? this.saf.scope.mrgfile);
+    let mrgfile = path.join(
+      this.scopedir,
+      this.saf.scope.glossarydir,
+      mrgFileName ?? this.saf.scope.mrgfile
+    );
 
     // Get the MRG map of the MRG file
     const mrg = await this.getMrgMap(mrgfile);
