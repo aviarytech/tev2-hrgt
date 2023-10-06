@@ -51,6 +51,10 @@ program
     "List of term selection criteria that are used to generate"
   )
   .option(
+    "-te, --template",
+    "Path (including the filename) of the mustache template file"
+  )
+  .option(
     "-m, --method",
     "The method that is used to create the output (default HTML)"
   )
@@ -96,6 +100,7 @@ async function main(): Promise<void> {
     scopedir: options.scopedir ?? ".",
     input: options.input,
     output: options.output ?? "default",
+    template: options.template ?? "template.mustache",
   });
 
   // Resolve terms

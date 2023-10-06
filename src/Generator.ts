@@ -13,23 +13,27 @@ export class Generator {
   private glossary!: Glossary;
   private entries: Entry[];
   private htmlOutput!: string;
+  private template: string;
 
   public constructor({
     method,
     scopedir,
     input,
     output,
+    template,
   }: {
     method: any;
     scopedir: string;
     input: string;
     output: string;
+    template: string;
   }) {
     this.entries = [];
     this.method = method;
     this.scopedir = scopedir;
     this.inputGlob = input;
     this.outputName = output;
+    this.template = template;
     log.info(
       `Using ${this.method} method with MRG ${
         this.inputGlob ?? "(from SAF scope.mrgfile)"
@@ -77,10 +81,7 @@ export class Generator {
 
   private async generateHTML(): Promise<void> {
     try {
-      const templateFile = fs.readFileSync(
-        "./assets/hrg-template.mustache",
-        "utf8"
-      );
+      const templateFile = fs.readFileSync(this.template, "utf8");
       const template = Handlebars.compile(templateFile);
       this.htmlOutput = template({ entries: this.entries });
     } catch (error) {
