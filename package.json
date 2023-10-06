@@ -1,11 +1,11 @@
 {
   "name": "@aviarytech/tev2-hrgt",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Human Readable Glossary Tool (HRGT)",
   "main": "lib/Run.js",
   "types": "lib/Run.d.ts",
   "bin": {
-    "trrt": "./lib/Run.js"
+    "hrgt": "./lib/Run.js"
   },
   "type": "module",
   "scripts": {
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/aviarytech/tev2-hrgt#readme",
   "dependencies": {
+    "@aviarytech/tev2-hrgt": "^0.0.1",
     "chalk": "^4.1.2",
     "commander": "10.0.0",
     "figlet": "^1.6.0",
