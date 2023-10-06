@@ -68,7 +68,9 @@ async function main(): Promise<void> {
   }
 
   console.log(
-    chalk.red(figlet.textSync("TEv2 HRGT", { horizontalLayout: "full" }))
+    chalk.red(
+      figlet.textSync(`TEv2 HRGT v${version}`, { horizontalLayout: "full" })
+    )
   );
 
   if (options.config) {
