@@ -99,7 +99,7 @@ async function main(): Promise<void> {
     method: options.method ?? "html",
     scopedir: options.scopedir ?? ".",
     input: options.input,
-    output: options.output ?? "default",
+    output: options.output ?? "index",
     template: options.template ?? "template.mustache",
   });
 
