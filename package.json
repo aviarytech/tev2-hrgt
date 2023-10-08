@@ -1,6 +1,6 @@
 {
   "name": "@aviarytech/tev2-hrgt",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Human Readable Glossary Tool (HRGT)",
   "main": "lib/Run.js",
   "types": "lib/Run.d.ts",
