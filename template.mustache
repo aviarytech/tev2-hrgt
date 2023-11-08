@@ -13,22 +13,21 @@
   {{#entries}}
   <li class="glossary-item">
     <div class="glossary-term">
-      <strong>Term:</strong> {{term}}
+      <strong>Term:</strong> {{glossaryTerm}}
     </div>
     <div class="glossary-definition">
       <strong>Definition:</strong>
-      {{#glossaryText}}
-        {{glossaryText}}
-      {{/glossaryText}}
-      {{^glossaryText}}
+      {{#if glossaryText}}
+        {{{glossaryText}}}
+      {{else}}
         No glossary text available.
-      {{/glossaryText}}
+      {{/if}}
     </div>
-    {{#altterms}}
+    {{#if altterms}}
     <div class="glossary-alternatives">
       <strong>Alternative Terms:</strong> {{.}}
     </div>
-    {{/altterms}}
+    {{/if}}
   </li>
   {{/entries}}
   </ul>

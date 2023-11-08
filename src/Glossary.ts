@@ -93,7 +93,7 @@ export class Glossary {
 
     // Get the MRG map of the MRG file
     const mrg = await this.getMrgMap(mrgfile);
-    console.log(mrgfile);
+    log.info(`MRG: ${mrgfile}`);
     // Populate the runtime glossary with the MRG entries
     if (mrg.entries) {
       await this.populateRuntime(mrg, mrgfile);

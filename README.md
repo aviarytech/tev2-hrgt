@@ -10,7 +10,7 @@ The **Human Readable Glossary Tool (HRGT)** generates a Human Readable Glossary 
 Install from the command line and make globally available.
 
 ```bash
-npm install @aviarytech/hrgt -g
+npm install @aviarytech/tev2-hrgt -g
 ```
 
 ## Calling the Tool

@@ -1,4 +1,5 @@
 import Handlebars from "handlebars";
+import { marked } from 'marked';
 import { log } from "./Report.js";
 import { Entry, Glossary, Output } from "./Glossary.js";
 import path, { resolve } from "path";
@@ -76,14 +77,14 @@ export class Generator {
     this.entries = outputs.flatMap((o) => {
       return o.entries;
     });
-    console.log(outputs);
+    log.info(`${this.entries.length} Entries`)
   }
 
   private async generateHTML(): Promise<void> {
     try {
       const templateFile = fs.readFileSync(this.template, "utf8");
       const template = Handlebars.compile(templateFile);
-      this.htmlOutput = template({ entries: this.entries });
+      this.htmlOutput = template({ entries: this.entries.map(e => ({...e, glossaryText: marked.parse(e.glossaryText) })) });
     } catch (error) {
       log.error("Failed to generate HTML", error);
     }
